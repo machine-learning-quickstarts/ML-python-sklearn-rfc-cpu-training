@@ -1,0 +1,15 @@
+buildPack: ml-python-training
+pipelineConfig:
+
+  pipelines:
+    overrides:
+      - pipeline: pullRequest
+        stage: build
+        name: testing
+        step:
+          sh: source /root/.bashrc && python3 -m pip install -r requirements.txt && pytest -v
+      - pipeline: release
+        stage: build
+        name: testing
+        step:
+          sh: source /root/.bashrc && python3 -m pip install -r requirements.txt && pytest -v

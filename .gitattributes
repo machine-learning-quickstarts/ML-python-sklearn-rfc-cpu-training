@@ -1,0 +1,2 @@
+*.py linguist-language=ml-python-training
+*.onnx filter=lfs diff=lfs merge=lfs -text
