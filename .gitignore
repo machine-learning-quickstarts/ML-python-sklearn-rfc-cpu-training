@@ -108,6 +108,5 @@ pyvenv.cfg
 .tm_properties
 
 log/
-*.onnx
 *.joblib
 /venv/
