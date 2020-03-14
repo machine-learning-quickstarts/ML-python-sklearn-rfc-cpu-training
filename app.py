@@ -87,6 +87,6 @@ with open("metrics/roc_auc.metric", "w+") as f:
 
 # plots
 confusion_metrics = plot_confusion_matrix(clf, X_test, y_test, display_labels=class_names, cmap=plt.cm.Blues)
-confusion_metrics.ax_.set_title("Confusion matrix of KNN classifier on Iris dataset")
+confusion_metrics.ax_.set_title("Confusion matrix of random forest classifier on Iris dataset")
 plt.savefig('metrics/confusion_matrix.png')
 plt.clf()
