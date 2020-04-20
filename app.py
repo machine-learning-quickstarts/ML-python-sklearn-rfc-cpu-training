@@ -18,7 +18,7 @@ RANDOM_SEED = 42
 # Step 1: Set up target metrics for evaluating training
 
 # Define a target loss metric to aim for
-target_f1 = 0.9
+target_f1 = 0.8
 
 # instantiate classifier and scaler
 clf = ensemble.RandomForestClassifier()
