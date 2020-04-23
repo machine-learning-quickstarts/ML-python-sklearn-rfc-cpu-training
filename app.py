@@ -18,7 +18,7 @@ RANDOM_SEED = 42
 # Step 1: Set up target metrics for evaluating training
 
 # Define a target loss metric to aim for
-target_f1 = 0.9
+target_f1 = 0.8
 
 # instantiate classifier and scaler
 clf = ensemble.RandomForestClassifier()
@@ -87,6 +87,6 @@ with open("metrics/roc_auc.metric", "w+") as f:
 
 # plots
 confusion_metrics = plot_confusion_matrix(clf, X_test, y_test, display_labels=class_names, cmap=plt.cm.Blues)
-confusion_metrics.ax_.set_title("Confusion matrix of KNN classifier on Iris dataset")
+confusion_metrics.ax_.set_title("Confusion matrix of random forest classifier on Iris dataset")
 plt.savefig('metrics/confusion_matrix.png')
 plt.clf()
